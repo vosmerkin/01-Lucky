@@ -11,6 +11,7 @@ public class Lucky {
         for (int i = 0; i < tries; i++) {
             System.out.printf("(%d) Input a Obverse (1) or Reverse (0): ", i + 1);
             if (in.nextInt() == 1)
+
                 userGuess[i] = true;
             else
                 userGuess[i] = false;
