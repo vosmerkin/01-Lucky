@@ -4,7 +4,7 @@ public class Lucky {
 
     public static final int numTries = 5;
 
-//user makes 5 tries
+//user makes 5 tries__
     static boolean[] userMakesTries(int tries) {
         Scanner in = new Scanner(System.in);
         boolean[] userGuess = new boolean[tries];
