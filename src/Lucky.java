@@ -1,8 +1,7 @@
 
-
 public class Lucky {
 
-fd//    public static final int numTries = 5;
+//    public static final int numTries = 5;
 //
 ////user makes 5 tries__
 //    static boolean[] userMakesTries(int tries) {
