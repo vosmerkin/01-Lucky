@@ -19,7 +19,7 @@ public class GameProtocol {     //used to collect tries
         boolean[] compTries;
         compTries = ComputerPlayer1.computerTossesCoin(tries);
 
-        for (int i = 0; i < tries; i++) {
+       for (int i = 0; i < tries; i++) {
             if (playerGuesses[i] == compTries[i])
                 System.out.printf("(%d) User guessed right", i + 1);
 
