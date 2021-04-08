@@ -1,9 +1,11 @@
 import java.util.*;
 
-public class HumanPlayer {
+public class HumanPlayer implements Player {
     // boolean[] playerGuesses;
 
-    public boolean[] userMakesTries(int tries) {
+
+
+    public boolean[] makeGuesses(int tries) {
         Scanner in = new Scanner(System.in);
         boolean[] userGuess = new boolean[tries];
 
@@ -16,6 +18,17 @@ public class HumanPlayer {
         }
 
         return userGuess;
+    }
+
+    public boolean[] tossTheCoin(int tries) {
+        Coin coin1 = new Coin();
+        boolean[] coins = new boolean[tries];
+
+        for (int i = 0; i < tries; i++) {
+            coins[i] = coin1.toss();
+            System.out.printf("(%d) Computer tosses the coin: (%b) %n", i + 1, coins[i]);
+        }
+        return coins;
     }
 }
 

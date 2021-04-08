@@ -13,11 +13,11 @@ public class GameProtocol {     //used to collect tries
     public void compareTries(int tries) {
         HumanPlayer HumanPlayer1 = new HumanPlayer();
         boolean[] playerGuesses;
-        playerGuesses = HumanPlayer1.userMakesTries(tries);
+        playerGuesses = HumanPlayer1.makeGuesses(tries);
 
         ComputerPlayer ComputerPlayer1 = new ComputerPlayer();
         boolean[] compTries;
-        compTries = ComputerPlayer1.computerTossesCoin(tries);
+        compTries = ComputerPlayer1.tossTheCoin(tries);
 
        for (int i = 0; i < tries; i++) {
             if (playerGuesses[i] == compTries[i])
