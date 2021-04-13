@@ -1,6 +1,14 @@
 import java.util.*;
 
-public class GameProtocol {     //used to collect tries
+public class GameProtocol {
+
+    private final Player humanPlayer;
+    private final Player computerPlayer;
+
+    public GameProtocol(Player humanPlayer, Player computerPlayer) {
+        this.humanPlayer = humanPlayer;
+        this.computerPlayer = computerPlayer;
+    }
 
     public int askForNumTries() {
         int numTries;
@@ -11,13 +19,12 @@ public class GameProtocol {     //used to collect tries
     }
 
     public void compareTries(int tries) {
-        HumanPlayer HumanPlayer1 = new HumanPlayer();
-        boolean[] playerGuesses;
-        playerGuesses = HumanPlayer1.makeGuesses(tries);
 
-        ComputerPlayer ComputerPlayer1 = new ComputerPlayer();
+        boolean[] playerGuesses;
+        playerGuesses = humanPlayer.makeGuesses(tries);
+
         boolean[] compTries;
-        compTries = ComputerPlayer1.tossTheCoin(tries);
+        compTries = computerPlayer.tossTheCoin(tries);
 
        for (int i = 0; i < tries; i++) {
             if (playerGuesses[i] == compTries[i])

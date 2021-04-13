@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class ComputerPlayer {
-
+public class ComputerPlayer implements Player {
+    @Override
     public boolean[] tossTheCoin(int tries) {
         Coin coin1 = new Coin();
         boolean[] coins = new boolean[tries];
@@ -13,6 +13,7 @@ public class ComputerPlayer {
         return coins;
     }
 
+    @Override
     public boolean[] makeGuesses(int tries) {
         Scanner in = new Scanner(System.in);
         boolean[] userGuess = new boolean[tries];
