@@ -14,19 +14,11 @@ public class ComputerPlayer implements Player {
     }
 
     @Override
-    public boolean[] makeGuesses(int tries) {
-        Scanner in = new Scanner(System.in);
-        boolean[] userGuess = new boolean[tries];
+    public boolean[] makeGuesses (int tries) {
+        // the same as Toss_the_coin
+        System.out.print("Computer tosses to guess the coin");
 
-        for (int i = 0; i < tries; i++) {
-            System.out.printf("(%d) Input a Obverse (1) or Reverse (0): ", i + 1);
-            if (in.nextInt() == 1)
-                userGuess[i] = true;
-            else
-                userGuess[i] = false;
-        }
-
-        return userGuess;
+        return tossTheCoin(tries);
     }
 
 }
